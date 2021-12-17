@@ -3,13 +3,33 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node dist/main/api",
+    "build": "rimraf dist && yarn tsc -p tsconfig-build.json",
+    "lint": "eslint .",
+    "lint:fix": "yarn lint -- --fix",
+    "test": "jest --passWithNoTests --no-cache --runInBand",
+    "test:watch": "yarn test --watch",
+    "test:staged": "yarn test --findRelatedTests",
+    "test:coverage": "yarn test --coverage",
+    "prepare": "husky install"
+  },
   "devDependencies": {
+    "@types/jest": "^27.0.3",
     "eslint": "^8.4.1",
     "eslint-config-standard-with-typescript": "^21.0.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "husky": "^7.0.4",
+    "jest": "^27.4.5",
     "lint-staged": "^12.1.2",
+    "ts-jest": "^27.1.2",
     "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": "17.x"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
   }
 }
