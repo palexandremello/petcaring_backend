@@ -11,22 +11,12 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "baseUrl": "src",
-    "paths": {
-      "@/*": [
-        "*"
-      ],
-      "@/tests/*": [
-        "../tests/*"
-      ]
-    },
+    "paths": { "@/*": ["*"], "@/tests/*": ["../tests/*"] },
     "sourceMap": true,
     "strict": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "src",
-    "tests"
-  ]
+  "include": ["src", "tests"]
 }
