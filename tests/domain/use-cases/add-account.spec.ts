@@ -57,7 +57,7 @@ describe('AddAccount', () => {
     userAccountRepo.save.mockRejectedValueOnce(new Error('save_error'))
 
     const promise = sut(userAccountData)
-
+    await expect(promise).rejects.toThrow(new Error('save_error'))
     await expect(promise).rejects.toThrow(new Error('save_error'))
   })
 })
